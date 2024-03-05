@@ -1,11 +1,12 @@
 import {StatusBar} from 'expo-status-bar';
-import {Platform, SafeAreaView, StyleSheet, Text} from 'react-native';
+import {Platform, SafeAreaView, StyleSheet} from 'react-native';
+import Navigator from './src/navigators/Navigator';
 
 const App = () => {
   console.log('moro');
   return (
     <SafeAreaView style={styles.container}>
-      <Text>HeLLO!</Text>
+      <Navigator />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -17,7 +18,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     paddingTop: Platform.OS === 'android' ? 30 : 0,
   },
 });
